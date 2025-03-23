@@ -23,17 +23,19 @@
   // removved 'track'  'PageView' 
   </script>
 
-<!-- Ensure PageView Fires After Meta Pixel is Loaded -->
+<!-- Ensure fbq is Loaded Before Tracking PageView -->
 <script>
-  window.addEventListener("load", function() {
-    if (typeof fbq === "function") {
+  function checkFbqAndTrack() {
+    if (typeof fbq === "function" && fbq.callMethod) {
+      console.log("Meta Pixel is ready! Tracking PageView.");
       fbq('track', 'PageView');
-      console.error("Meta Pixell added successfully ,\nnow at below track pageview");
     } else {
-      console.error("Meta Pixel (fbq) is not loaded properly.");
-      alert("meta-pixel fbq not loaded ! ");
+      console.warn("Meta Pixel is not ready yet. Retrying...");
+      setTimeout(checkFbqAndTrack, 500); // Retry every 500ms
     }
-  });
+  }
+
+  window.addEventListener("load", checkFbqAndTrack);
 </script>
 
   <noscript><img height="1" width="1" style="display:none"
