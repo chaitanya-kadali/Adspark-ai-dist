@@ -5,7 +5,13 @@
   <meta  charset="UTF-8" />
   <title>AdSpark AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net;">
+
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self'; 
+  script-src 'self' 'unsafe-inline' https://connect.facebook.net https://fast.wistia.com;
+  img-src 'self' https://www.facebook.com https://assets.cdn.filesafe.space https://fast.wistia.com data:;
+  style-src 'self' 'unsafe-inline';
+  frame-src https://www.facebook.com https://fast.wistia.com;">
 
 <!-- Meta Pixel Code -->
 
