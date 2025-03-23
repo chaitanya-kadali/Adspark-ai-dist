@@ -19,9 +19,23 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1191647895139965');
-  fbq('track', 'PageView');
+  fbq('init', '1191647895139965');   // Initialize Meta Pixel
+  // removved 'track'  'PageView' 
   </script>
+
+<!-- Ensure PageView Fires After Meta Pixel is Loaded -->
+<script>
+  window.addEventListener("load", function() {
+    if (typeof fbq === "function") {
+      fbq('track', 'PageView');
+      console.error("Meta Pixell added successfully ,\nnow at below track pageview");
+    } else {
+      console.error("Meta Pixel (fbq) is not loaded properly.");
+      alert("meta-pixel fbq not loaded ! ");
+    }
+  });
+</script>
+
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1191647895139965&ev=PageView&noscript=1"
   /></noscript>
