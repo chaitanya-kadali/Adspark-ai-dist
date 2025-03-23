@@ -7,13 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self'; 
-  script-src 'self' 'unsafe-inline' https://connect.facebook.net https://fast.wistia.com;
-  img-src 'self' https://www.facebook.com https://fast.wistia.com data:;
-  style-src 'self' 'unsafe-inline';
-  font-src 'self' https://fast.wistia.com data:;
-  frame-src 'self' https://www.facebook.com https://fast.wistia.com;
-  connect-src 'self' https://fast.wistia.net https://pipedream.wistia.com;">
+  img-src 'self' 
+  https://www.facebook.com https://fast.wistia.com https://embed-ssl.wistia.com data:; 
+  script-src 'self' 'unsafe-inline' https://connect.facebook.net https://fast.wistia.com https://fast.wistia.net; 
+  media-src 'self' https://fast.wistia.com https://embed-ssl.wistia.com;">
+
 
 
 <!-- Meta Pixel Code -->
