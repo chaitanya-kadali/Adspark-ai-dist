@@ -6,11 +6,20 @@
   <title>AdSpark AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta http-equiv="Content-Security-Policy" content="
+  <!-- <meta http-equiv="Content-Security-Policy" content="
   img-src 'self' 
   https://www.facebook.com https://fast.wistia.com https://embed-ssl.wistia.com data:; 
   script-src 'self' 'unsafe-inline' https://connect.facebook.net https://fast.wistia.com https://fast.wistia.net; 
-  media-src 'self' https://fast.wistia.com https://embed-ssl.wistia.com;">
+  media-src 'self' https://fast.wistia.com https://embed-ssl.wistia.com;"> -->
+
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' https://www.facebook.com https://fast.wistia.com https://embed-ssl.wistia.com data: https://assets.cdn.filesafe.space;
+  script-src 'self' 'unsafe-inline' https://connect.facebook.net https://fast.wistia.com https://fast.wistia.net https://browser.sentry-cdn.com;
+  media-src 'self' https://fast.wistia.com https://embed-ssl.wistia.com blob:;
+"> -->
+
+<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' blob: data:;">
 
 
 
